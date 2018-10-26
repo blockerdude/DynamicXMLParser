@@ -1,0 +1,10 @@
+E:\VisualStudioExampleProjects\DynamicXMLParser\DynamicXMLParser\bin\Debug\DynamicXMLParser.exe.config
+E:\VisualStudioExampleProjects\DynamicXMLParser\DynamicXMLParser\bin\Debug\DynamicXMLParser.exe
+E:\VisualStudioExampleProjects\DynamicXMLParser\DynamicXMLParser\bin\Debug\DynamicXMLParser.pdb
+E:\VisualStudioExampleProjects\DynamicXMLParser\DynamicXMLParser\obj\Debug\DynamicXMLParser.csprojResolveAssemblyReference.cache
+E:\VisualStudioExampleProjects\DynamicXMLParser\DynamicXMLParser\obj\Debug\DynamicXMLParser.exe
+E:\VisualStudioExampleProjects\DynamicXMLParser\DynamicXMLParser\obj\Debug\DynamicXMLParser.pdb
+E:\VisualStudioExampleProjects\DynamicXMLParser\DynamicXMLParser\bin\Debug\DynamicXMLParser.exe.manifest
+E:\VisualStudioExampleProjects\DynamicXMLParser\DynamicXMLParser\bin\Debug\DynamicXMLParser.application
+E:\VisualStudioExampleProjects\DynamicXMLParser\DynamicXMLParser\obj\Debug\DynamicXMLParser.exe.manifest
+E:\VisualStudioExampleProjects\DynamicXMLParser\DynamicXMLParser\obj\Debug\DynamicXMLParser.application

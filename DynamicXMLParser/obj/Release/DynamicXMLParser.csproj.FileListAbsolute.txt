@@ -1,0 +1,5 @@
+E:\VisualStudioExampleProjects\DynamicXMLParser\DynamicXMLParser\bin\Release\DynamicXMLParser.exe.config
+E:\VisualStudioExampleProjects\DynamicXMLParser\DynamicXMLParser\bin\Release\DynamicXMLParser.exe
+E:\VisualStudioExampleProjects\DynamicXMLParser\DynamicXMLParser\bin\Release\DynamicXMLParser.pdb
+E:\VisualStudioExampleProjects\DynamicXMLParser\DynamicXMLParser\obj\Release\DynamicXMLParser.exe
+E:\VisualStudioExampleProjects\DynamicXMLParser\DynamicXMLParser\obj\Release\DynamicXMLParser.pdb
