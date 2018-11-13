@@ -13,6 +13,9 @@ namespace DynamicXMLParser
         private static readonly string CANCEL_MESSAGE = "\nScript Cancelled, press any key to exit...";
         private static readonly string NAMESPACE = "com/thomsonreuters/schemas/person-report";
         private static readonly string OUTPUT_FILE_NAME = "output.csv";
+        private static readonly string CLEAR_SECTION_RESULTS = "ClearSectionResults";
+        private static readonly string SECTION_DETAILS = "SectionDetails";
+        private static readonly string FILE_NAME = "File Name";
 
         [STAThread]
         static void Main(string[] args)
@@ -84,6 +87,7 @@ namespace DynamicXMLParser
         {
 
             List<string> foundValues = new List<string>();
+            foundValues.Add(file.Substring(file.LastIndexOf('\\') + 1));
             headers.ForEach(sectionHeaders =>
             {
                 foundValues.Add(getSpecifiedColumn(file, sectionHeaders, name));
@@ -101,8 +105,12 @@ namespace DynamicXMLParser
 
             var currentDoc = XElement.Parse(document.OuterXml);
             var enumerator = sectionHeaders.GetEnumerator();
+            
             try
             {
+                enumerator.MoveNext();
+                currentDoc = getFirstElement(currentDoc, enumerator.Current, nameSpace);
+
                 while (enumerator.MoveNext())
                 {
                     var currentSectionHeader = enumerator.Current;
@@ -118,6 +126,14 @@ namespace DynamicXMLParser
                 return "Error!";
             }
 
+        }
+
+        private static XElement getFirstElement(XElement document, SectionHeader firstHeader, XNamespace nameSpace)
+        {
+                XName name = firstHeader.hasNameSpace ? nameSpace + firstHeader.headerName : firstHeader.headerName;
+                var descendent = (from element in document.Descendants(name) select element).First();
+            
+                return descendent;
         }
 
 
@@ -195,6 +211,7 @@ namespace DynamicXMLParser
 
                 reader = File.OpenText(file);
                 string currentLine;
+                columnHeaders.Add(FILE_NAME);
                 while ((currentLine = reader.ReadLine()) != null)
                 {
                     var items = currentLine.Split(' ').ToList();
